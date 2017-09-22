@@ -1,0 +1,34 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false,
+        "targets": {
+          "browsers": "> 1%",
+          "uglify": true
+        },
+        "useBuiltIns": true
+      }
+    ],
+    "react"
+  ],
+  "plugins": [
+    "transform-semantic-ui-react-imports", {
+                "convertMemberImports": true,
+                "importType": "es",
+                "addCssImports": false,
+                "importMinifiedCssFiles": false,
+                "addLessImports": false,
+                "addDuplicateStyleImports": false
+            }, 
+    "syntax-dynamic-import",
+    "transform-object-rest-spread",
+    [
+      "transform-class-properties",
+      {
+        "spec": true
+      }
+    ]
+  ]
+}
